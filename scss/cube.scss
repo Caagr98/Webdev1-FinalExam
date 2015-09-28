@@ -1,0 +1,71 @@
+$size1: 50px;
+$size2: 500px;
+html {
+	background: black;
+
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: $size2 + 2 * $size1;
+	height: $size2 + 2 * $size1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cube-container {
+	width: $size2;
+	height: $size2;
+	perspective: $size2 * 3;
+	transform-style: preserve-3d;
+}
+.cube {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	transform-origin: $size2/2 $size2/2 $size2/-2;
+	width: 100%;
+	height: 100%;
+}
+.cube > div {
+	transform-style: preserve-3d;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-origin: inherit;
+	//opacity: 0.75;
+	$shadow: 0 0 $size1/2 black;
+	box-shadow: $shadow, $shadow, $shadow, $shadow;
+}
+
+.s1 {background-color: #FF7F7F;}
+.s2 {background-color: #FFFF7F;}
+.s3 {background-color: #7FFF7F;}
+.s4 {background-color: #7FFFFF;}
+.s5 {background-color: #7F7FFF;}
+.s6 {background-color: #FF7FFF;}
+
+.s1 {transform: rotateY(  0deg);}
+.s2 {transform: rotateY( 90deg);}
+.s3 {transform: rotateY(180deg);}
+.s4 {transform: rotateY(270deg);}
+.s5 {transform: rotateX( 90deg);}
+.s6 {transform: rotateX(-90deg);}
+
+.nav {
+	transition: background-color 0.5s;
+	background-color: rgba(255, 255, 255, 0.125);
+	border-radius: $size1/4;
+}
+.nav:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav.vert {
+	width: $size2;
+	height: $size1;
+}
+.nav.hor {
+	height: $size2;
+	width: $size1;
+}
