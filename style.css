@@ -1,0 +1,26 @@
+html {
+	margin: 0;
+	background: #AFAFAF;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.text {
+	width: 35em;
+	font-family: sans-serif;
+	margin: 1em auto;
+	background: #DFDFDF;
+	padding: 1em;
+	border-radius: 1em;
+	box-shadow: 0 0 0.5em black,
+	            0 0 0.5em #7F7F7F inset;
+}
+.text h1, .text h2 {margin: 0}
+
+.text h1 {color: #3F0000; font-size: 2.5em}
+.text h2 {color: #003F00; font-size: 2em}
+.text    {color: #1F1F1F; font-size: 1.25em}
+
+.tag {font-family: monospace}
+.ref {font-size: 0.6em; position: relative; bottom: 0.4em}
