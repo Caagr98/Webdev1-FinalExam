@@ -26,6 +26,39 @@ body {
 
 .tag {font-family: monospace}
 .ref {font-size: 0.6em; position: relative; bottom: 0.4em}
+@keyframes blink {
+	66% {opacity: 0}
+}
+.blink {
+	animation: blink 1s infinite;
+	opacity: 100%;
+}
+@keyframes marqee {
+    0%   {transform:translateX(-100%)}
+    100% {transform:translateX(100%)}
+}
+.marqee {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+.marqee span {
+	display: inline-block;
+	animation: marqee 1s infinite linear;
+}
+/* Just for the lols: */
+.marqee:hover::before {
+	position: absolute;
+	content: "";
+	height: 1em;
+	border-left: 2px solid cyan;
+}
+.marqee:hover::after {
+	position: absolute;
+	content: "";
+	height: 1em;
+	border-right: 2px solid orange;
+}
 
 .side {
 	position: fixed;
