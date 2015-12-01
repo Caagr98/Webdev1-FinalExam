@@ -7,7 +7,5 @@ $(function() {
 			href: "#h"+idx
 		}).text($el.text()).appendTo(nav)
 		$el.attr("id", "h"+idx)
-		var depth = $el.prop("tagName").substring(1);
-		console.log($el.prop("tagName"))
 	})
 })
